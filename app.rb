@@ -42,6 +42,8 @@ class App < Sinatra::Base
       @operation = '*'
     when "divide"
       @operation = '/'
+    else
+      "Unknown math operation. Please add, sub, mult, or div."
     end
     (@number1.method(@operation).(@number2)).to_s
     
